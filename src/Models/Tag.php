@@ -1,6 +1,4 @@
-<?php
-
-namespace jlourenco\tags\Models;
+<?php namespace jlourenco\tags\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;

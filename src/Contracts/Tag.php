@@ -1,4 +1,4 @@
-<? namespace jlourenco\tags\Contracts;
+<?php namespace jlourenco\tags\Contracts;
 
 /**
  * Interface Tag.

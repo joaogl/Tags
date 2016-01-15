@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use \jlourenco\base\Database\Blueprint;
 
-class CreateContactsTables extends Migration
+class CreateTagsTables extends Migration
 {
 
     /**
@@ -14,7 +14,7 @@ class CreateContactsTables extends Migration
     public function up()
     {
 
-        Schema::create('Tag', function (Blueprint $table) {
+        Schema::create('Tag', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->string('description', 250)->nullable();
@@ -25,7 +25,7 @@ class CreateContactsTables extends Migration
             $table->foreign('created_by')->references('id')->on('User');
         });
 
-        Schema::create('TagCategory', function (Blueprint $table) {
+        Schema::create('TagCategory', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->string('description', 250)->nullable();
@@ -33,7 +33,7 @@ class CreateContactsTables extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('Tag_TagCategory', function (Blueprint $table) {
+        Schema::create('Tag_TagCategory', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('tag')->unsigned();
             $table->integer('tagcategory')->unsigned();
